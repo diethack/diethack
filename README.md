@@ -1,0 +1,1 @@
+# diethack
