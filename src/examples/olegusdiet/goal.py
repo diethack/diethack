@@ -2,10 +2,10 @@ from elements import makeElements
 import logging
 
 def goal():
-    mass = 89.0
+    mass = 89.0 # kg
 
     # There's no need to track what is referenced in DRI tables as "chloride".
-    # It's meant only chloride part of NaCl, therefore is tracked implicitly
+    # It means only chloride part of NaCl, therefore it's tracked implicitly
     # by tracking sodium.
     # (Dietary Reference Intakes for Water, Potassium, Sodium, Chloride, and Sulfate)
 
