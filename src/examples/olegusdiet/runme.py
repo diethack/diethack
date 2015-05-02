@@ -2,7 +2,7 @@ from goal import goal
 from products import products
 from diethack import makeProduct, makeElements, makeProductUnits, \
                      fetchNndbCodes, solve, makeConverter
-from random import seed
+from random import seed, sample
 import logging
 
 def randomProducts(count):
