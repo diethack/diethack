@@ -1,12 +1,13 @@
 from goal import goal
 from products import products
-from diethack import makeProduct, makeElements, makeProductUnits, solve
+from diethack import makeProduct, makeElements, makeProductUnits, \
+                     fetchNndbCodes, solve
 from random import seed
 import logging
 
 def randomProducts(count):
     return [makeProduct(**dict(p.items() + [('price',10), ('priceMass',1)]))
-           for p in sample(fetchUsdaCodes(), count)]
+           for p in sample(fetchNndbCodes(), count)]
 
 def elementsPriority():
     return dict([(k, 1) for k in makeElements().keys()])

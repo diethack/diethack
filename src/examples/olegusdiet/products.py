@@ -1,5 +1,5 @@
 from diethack import makeProduct, makeProductUnits, makeElements, \
-                     fetchUsda, fetchUsdaCodes, makeConverter
+                     fetchNndb, makeConverter
 from random import shuffle
 
 def products():
@@ -46,7 +46,7 @@ def _convert(**kwargs):
 
 def _soyProteinSprouts():
     return [makeProduct(**dict(
-        fetchUsda('16122').items() + {
+        fetchNndb('16122').items() + {
         'name': 'soy protein isolate bulk "sprouts"',
         'nameShort': 'soy protein',
         'price': 699,
@@ -54,7 +54,7 @@ def _soyProteinSprouts():
 
 def _chickenBreast():
     return [makeProduct(**dict(
-        fetchUsda('05062').items() + {
+        fetchNndb('05062').items() + {
         'name': 'boneless skinless chicken breasts "sprouts"',
         'nameShort': 'chicken breasts',
         'price': 199, # weekly special
@@ -63,7 +63,7 @@ def _chickenBreast():
 def _soybeanOil():
     oilDensK = 0.922
     return [makeProduct(**dict(
-        fetchUsda('04044').items() + {
+        fetchNndb('04044').items() + {
         'name': 'soybean oil "carlini" (aldi)',
         'nameShort': 'soybean oil',
         'price': 629,
@@ -71,7 +71,7 @@ def _soybeanOil():
 
 def _codLiverOil():
     return [makeProduct(**dict(
-        fetchUsda('04589').items() + {
+        fetchNndb('04589').items() + {
         'name': 'cod liver oil "twinlab"',
         'nameShort': 'cod liver oil',
         'dataUrl': 'http://www.vitacost.com/twinlab-norwegian-cod-liver-oil-unflavored-12-fl-oz',
@@ -80,7 +80,7 @@ def _codLiverOil():
 
 def _brownRiceShort():
     return [makeProduct(**dict(
-        fetchUsda('20040').items() + {
+        fetchNndb('20040').items() + {
         'name': 'brown rice short-grain bulk "sprouts"',
         'nameShort': 'brown rice',
         'price': 99,
@@ -88,7 +88,7 @@ def _brownRiceShort():
 
 def _whiteRiceLong():
     return [makeProduct(**dict(
-        fetchUsda('20044').items() + {
+        fetchNndb('20044').items() + {
         'name': 'white rice long-grain bulk "sprouts"',
         'nameShort': 'white rice',
         'price': 99,
@@ -96,7 +96,7 @@ def _whiteRiceLong():
 
 def _barley():
     return [makeProduct(**dict(
-        fetchUsda('20005').items() + {
+        fetchNndb('20005').items() + {
         'name': 'pearl barley bulk "sprouts"',
         'nameShort': 'barley',
         'price': 99,
@@ -104,7 +104,7 @@ def _barley():
 
 def _sugar():
     return [makeProduct(**dict(
-        fetchUsda('19336').items() + {
+        fetchNndb('19336').items() + {
         'name': 'granulated sugar "baker\'s corner" (aldi)',
         'nameShort': 'sugar',
         'price': 149,
@@ -112,7 +112,7 @@ def _sugar():
 
 def _wheatBran():
     return [makeProduct(**dict(
-        fetchUsda('20077').items() + {
+        fetchNndb('20077').items() + {
         'name': 'wheat bran "bob\'s red mill"',
         'nameShort': 'wheat bran',
         'dataUrl': 'http://www.amazon.com/gp/product/B004VLVIL4',
@@ -121,7 +121,7 @@ def _wheatBran():
 
 def _tableSalt():
     return [makeProduct(**dict(
-        fetchUsda('02047').items() + {
+        fetchNndb('02047').items() + {
         'name': 'table salt "morton"',
         'nameShort': 'salt',
         'price': 97,

@@ -192,17 +192,17 @@ def parseNNDBTable(rows, cols):
     process = lambda x: dequote(x.decode('latin1').strip())
     return [[process(x) for x in row.split(NNDB_DELIM)] for row in rows]
 
-def fetchUsda(code):
+def fetchNndb(code):
     import _cache
     import _cache.chunks
     assert type(code) in (str, unicode)
-    chunkNo = cache.chunks.chunkNos[code]
+    chunkNo = _cache.chunks.chunkNos[code]
     name = chunkName(chunkNo)
-    if not hasattr(cache, name):
+    if not hasattr(_cache, name):
         logging.debug('Loading cache chunk %i' % chunkNo)
         __import__('%s.%s' % (CACHE_DIR, name))
-    return getattr(cache, name).values[code]
+    return getattr(_cache, name).values[code]
 
-def fetchUsdaCodes():
+def fetchNndbCodes():
     import _cache.chunks
     return _cache.chunks.chunkNos.keys()
