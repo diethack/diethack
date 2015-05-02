@@ -7,7 +7,7 @@ arch=('any')
 url="http://www.diethack.org"
 license=('GPL3')
 depends=('glpk' 'python2')
-makedepends=('git' 'python2-pip' 'unzip')
+makedepends=('git' 'python2-setuptools' 'unzip')
 source=("git+https://github.com/diethack/diethack#tag=${pkgver}"
         'https://www.ars.usda.gov/SP2UserFiles/Place/80400525/Data/SR27/dnload/sr27asc.zip')
 md5sums=('SKIP'
@@ -19,5 +19,6 @@ build() {
 }
 
 package() {
-    pip2 install "$srcdir/diethack/src"
+    cd "$srcdir/$pkgname-$pkgver"
+    python2 setup.py install --root="$pkgdir/" --optimize=1
 }
