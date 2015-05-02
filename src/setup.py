@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 from os.path import isfile, join, dirname
 from diethack._storage import rebuildCache
 import logging
