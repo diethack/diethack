@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
-from os.path import isfile
+from os.path import isfile, join, dirname
 
-if not isfile('diethack/_cache/cache.py'):
+if not isfile(join(dirname(__file__), 'diethack/_cache/chunks.py')):
     print 'Please build the cache first.'
     exit(1)
 
