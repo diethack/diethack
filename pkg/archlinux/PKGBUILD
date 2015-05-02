@@ -2,7 +2,7 @@
 pkgname=python2-diethack
 pkgver=0.0.0
 pkgrel=1
-pkgdesc="Diet problem solver with dietary reference intakes in mind."
+pkgdesc="Diet problem solver with Dietary Reference Intakes in mind."
 arch=('any')
 url="http://www.diethack.org"
 license=('custom')
@@ -14,10 +14,10 @@ md5sums=('SKIP'
          '74ed79e23e2eefc019bcebd34e9d4228')
 
 package() {
-    mkdir -p "$pkgdir"/usr/share/{,doc/,licenses/}diethack
-    cp -r "$srcdir/diethack/src/examples" "$pkgdir/usr/share/diethack"
-    cp "$srcdir/diethack/README.md" "$pkgdir/usr/share/doc/diethack"
-    cp "$srcdir/diethack/LICENSE" "$pkgdir/usr/share/licenses/diethack"
+    mkdir -p "$pkgdir"/usr/share/{,doc/,licenses/}"$pkgname"
+    cp -r "$srcdir/diethack/src/examples" "$pkgdir/usr/share/$pkgname"
+    cp "$srcdir/diethack/README.md" "$pkgdir/usr/share/doc/$pkgname"
+    cp "$srcdir/diethack/LICENSE" "$pkgdir/usr/share/licenses/$pkgname"
 
     cd "$srcdir/diethack/src"
     unzip "$srcdir/sr27asc.zip" -d diethack/nndb

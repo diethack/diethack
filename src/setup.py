@@ -11,7 +11,7 @@ if not isfile(join(dirname(__file__), 'diethack/_cache/chunks.py')):
 setup(
     name='diethack',
     version='0.0.0',
-    description='Diet problem solver with dietary reference intakes in mind.',
+    description='Diet problem solver with Dietary Reference Intakes in mind.',
     url='http://www.diethack.org',
     author='Oleg Plakhotniuk',
     author_email='contact@diethack.org',
