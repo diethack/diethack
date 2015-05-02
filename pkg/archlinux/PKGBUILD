@@ -14,6 +14,9 @@ md5sums=('SKIP'
          '74ed79e23e2eefc019bcebd34e9d4228')
 
 package() {
+    mkdir -p /usr/share/{,doc/}diethack
+    cp -r "$srcdir/diethack/src/examples" /usr/share/diethack
+    cp "$srcdir/diethack/README.md" /usr/share/doc/diethack
     cd "$srcdir/diethack/src"
     unzip "$srcdir/sr27asc.zip" -d diethack/nndb
     python2 setup.py install --root="$pkgdir/" --optimize=1
