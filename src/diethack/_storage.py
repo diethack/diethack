@@ -201,7 +201,7 @@ def fetchNndb(code):
     name = chunkName(chunkNo)
     if not hasattr(_cache, name):
         logging.debug('Loading cache chunk %i' % chunkNo)
-        import_module('%s.%s' % (CACHE_DIR, name), package='diethack')
+        import_module('.%s.%s' % (CACHE_DIR, name), package='diethack')
     return getattr(_cache, name).values[code]
 
 def fetchNndbCodes():
