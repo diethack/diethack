@@ -1,0 +1,22 @@
+# Maintainer: Oleg Plakhotniuk <olegus8@gmail.com>
+pkgname=python2-diethack
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="Diet calculator for hackers."
+arch=('any')
+url="http://www.diethack.org"
+license=('GPL3')
+depends=('glpk' 'python2')
+makedepends=('git' 'python2-pip' 'unzip')
+source=("git+https://github.com/diethack/diethack#tag=${pkgver}"
+        "https://www.ars.usda.gov/SP2UserFiles/Place/80400525/Data/SR27/dnload/sr27asc.zip")
+md5sums=('SKIP')
+
+build() {
+    unzip "$srcdir/sr27asc.zip" -d "$srcdir/$pkgname/src/nndb"
+    python2 -B "$srcdir/$pkgname/src/diethack/prepare.py"
+}
+
+package() {
+    python2-pip install "$srcdir/$pkgname/src"
+}
