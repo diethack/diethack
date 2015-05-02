@@ -29,5 +29,5 @@ setup(
         'Topic :: Software Development :: Libraries'
     ],
     keywords='diet calculator',
-    packages=['diethack']
+    packages=['diethack', 'diethack._cache']
 )
