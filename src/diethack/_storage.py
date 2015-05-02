@@ -193,8 +193,8 @@ def parseNNDBTable(rows, cols):
     return [[process(x) for x in row.split(NNDB_DELIM)] for row in rows]
 
 def fetchUsda(code):
-    import ._cache
-    import ._cache.chunks
+    import _cache
+    import _cache.chunks
     assert type(code) in (str, unicode)
     chunkNo = cache.chunks.chunkNos[code]
     name = chunkName(chunkNo)
@@ -204,5 +204,5 @@ def fetchUsda(code):
     return getattr(cache, name).values[code]
 
 def fetchUsdaCodes():
-    import ._cache.chunks
-    return ._cache.chunks.chunkNos.keys()
+    import _cache.chunks
+    return _cache.chunks.chunkNos.keys()
