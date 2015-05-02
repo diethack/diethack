@@ -174,5 +174,5 @@ def goal():
         boron = (upper(boronMaxPerDay), 'mg'),
         nickel = (upper(nickelMaxPerDay), 'mg'),
         silicon = (upper(siliconMaxPerDay), 'mg'),
-        vanadium = (upper(vanadiumMaxPerDay), 'mg')),
-    makeProductUnits()['elements'])
+        vanadium = (upper(vanadiumMaxPerDay), 'mg')
+    ), makeProductUnits()['elements'])
