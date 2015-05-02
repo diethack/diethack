@@ -1,4 +1,4 @@
-from elements import makeElements
+from diethack import makeConverter, makeElements, makeProductUnits
 import logging
 
 def goal():
@@ -128,7 +128,7 @@ def goal():
     def upper(v):
         return [0, max(v, 0.1)]
 
-    return makeElements(
+    return makeConverter().convertDict(makeElements(
         energy = (relaxed(energyPerDay), 'kcal'),
         water = (relaxed(waterPerDay), 'kg'),
         protein = (relaxed(proteinPerDay), 'g'),
@@ -174,4 +174,5 @@ def goal():
         boron = (upper(boronMaxPerDay), 'mg'),
         nickel = (upper(nickelMaxPerDay), 'mg'),
         silicon = (upper(siliconMaxPerDay), 'mg'),
-        vanadium = (upper(vanadiumMaxPerDay), 'mg'))
+        vanadium = (upper(vanadiumMaxPerDay), 'mg')),
+    makeProductUnits()['elements'])
