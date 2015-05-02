@@ -1,9 +1,10 @@
+import logging
+from random import seed, sample
 from goal import goal
 from products import products
 from diethack import makeProduct, makeElements, makeProductUnits, \
-                     fetchNndb, fetchNndbCodes, solve, makeConverter
-from random import seed, sample
-import logging
+                     fetchNndb, fetchNndbCodes, solve, makeConverter \
+                     reportHtml, reportShop, reportTxt
 
 def randomProducts(count):
     fetch = lambda c: \
