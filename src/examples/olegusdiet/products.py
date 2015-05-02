@@ -16,7 +16,7 @@ def products():
            _distilledWater() + \
            _microSupplements()
 
-def _microSupplements():
+def microSupplements():
     return _tableSalt() + \
            _optiMen() + \
            _cholineTablets() + \

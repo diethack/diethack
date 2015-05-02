@@ -1,7 +1,7 @@
 import logging
 from random import seed, sample
 from goal import goal
-from products import products
+from products import products, microSupplements
 from diethack import makeProduct, makeElements, makeProductUnits, \
                      fetchNndb, fetchNndbCodes, solve, makeConverter, \
                      reportHtml, reportShop, reportTxt
@@ -22,7 +22,7 @@ if __name__ == '__main__':
     logging.getLogger().setLevel(logging.DEBUG)
 
     olegusProds = products()
-    randomProds = randomProducts(100)
+    randomProds = randomProducts(100) + microSupplements()
 
     olegusDiet = solve(olegusProds, goal(), elementsPriority())
     randomDiet = solve(randomProds, goal(), elementsPriority())
