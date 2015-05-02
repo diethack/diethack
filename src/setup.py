@@ -1,6 +1,5 @@
 from setuptools import setup, find_packages
 from os.path import isfile
-from os import exit
 
 if not isfile('diethack/_cache/cache.py'):
     print 'Please build the cache first.'
