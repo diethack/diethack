@@ -1,9 +1,12 @@
 from setuptools import setup, find_packages
 from os.path import isfile, join, dirname
+from diethack._storage import rebuildCache
+import logging
 
 if not isfile(join(dirname(__file__), 'diethack/_cache/chunks.py')):
-    print 'Please build the cache first.'
-    exit(1)
+    logging.basicConfig(format='%(levelname)-8s %(asctime)-15s %(message)s')
+    logging.getLogger().setLevel(logging.INFO)
+    rebuildCache()
 
 setup(
     name='diethack',
