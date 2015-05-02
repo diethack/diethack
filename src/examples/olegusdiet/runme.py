@@ -19,10 +19,10 @@ def elementsPriority():
 if __name__ == '__main__':
     seed(12345)
     logging.basicConfig(format='%(levelname)-8s %(asctime)-15s %(message)s')
-    logging.getLogger().setLevel(logging.INFO)
+    logging.getLogger().setLevel(logging.DEBUG)
 
     olegusProds = products()
-    randomProds = randomProducts(20)
+    randomProds = randomProducts(100)
 
     olegusDiet = solve(olegusProds, goal(), elementsPriority())
     randomDiet = solve(randomProds, goal(), elementsPriority())
