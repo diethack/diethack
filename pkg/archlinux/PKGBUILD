@@ -15,7 +15,7 @@ md5sums=('SKIP'
 
 build() {
     unzip "$srcdir/sr27asc.zip" -d "$srcdir/diethack/src/diethack/nndb"
-    python2 -B "$srcdir/diethack/src/diethack/prepare.py"
+    python2 -B "$srcdir/diethack/src/prepare.py"
 }
 
 package() {
