@@ -3,7 +3,7 @@ from random import seed, sample
 from goal import goal
 from products import products
 from diethack import makeProduct, makeElements, makeProductUnits, \
-                     fetchNndb, fetchNndbCodes, solve, makeConverter \
+                     fetchNndb, fetchNndbCodes, solve, makeConverter, \
                      reportHtml, reportShop, reportTxt
 
 def randomProducts(count):
@@ -21,17 +21,20 @@ if __name__ == '__main__':
     logging.basicConfig(format='%(levelname)-8s %(asctime)-15s %(message)s')
     logging.getLogger().setLevel(logging.DEBUG)
 
-    olegusDiet = solve(products(), goal(), elementsPriority())
-    randomDiet = solve(randomProducts(20), goal(), elementsPriority())
+    olegusProds = products()
+    randomProds = randomProducts(20)
+
+    olegusDiet = solve(olegusProds, goal(), elementsPriority())
+    randomDiet = solve(randomProds, goal(), elementsPriority())
 
     with open('olegusdiet.html', 'w') as f:
-        f.write(reportHtml(products(), makeProductUnits(), goal(),
+        f.write(reportHtml(olegusProds, makeProductUnits(), goal(),
                            olegusDiet, 'light'))
     with open('olegusdiet.txt', 'w') as f:
-        f.write(reportTxt(products(), makeProductUnits(), goal(), olegusDiet))
+        f.write(reportTxt(olegusProds, makeProductUnits(), goal(), olegusDiet))
     with open('olegusdiet-shoplist.html', 'w') as f:
-        f.write(reportShop(products(), makeProductUnits(), goal(),
+        f.write(reportShop(olegusProds, makeProductUnits(), goal(),
                            olegusDiet, 'light'))
     with open('randomdiet.html', 'w') as f:
-        f.write(reportHtml(products(), makeProductUnits(), goal(),
+        f.write(reportHtml(randomProds, makeProductUnits(), goal(),
                            randomDiet, 'light'))
