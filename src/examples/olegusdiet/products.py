@@ -334,7 +334,7 @@ def _magnesiumTablets():
         price = 649,
         priceMass = 200, # tablets
         elementsMass = 1,
-        **_convert({
+        **_convert(
             elements = makeElements(
                 magnesium = (400, 'mg'),
                 magnesiumSup = (400, 'mg')
