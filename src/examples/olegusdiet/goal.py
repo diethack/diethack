@@ -1,5 +1,4 @@
 from diethack import makeConverter, makeElements, makeProductUnits
-import logging
 
 def goal():
     mass = 89.0 # kg
@@ -107,8 +106,6 @@ def goal():
     energyScale = timeBig*energyRateBig + timeMed*energyRateMed + timeLow*energyRateLow # kcal*kg-1
     energyScale *= timeScale
     energyWorkout = energyScale * mass # kcal
-
-    logging.info('energy per workout: %i kcal' % energyWorkout)
 
     daysPerWeek = 7.0
     workoutsPerWeek = 1.0
