@@ -19,5 +19,5 @@ build() {
 }
 
 package() {
-    python2-pip install "$srcdir/diethack/src"
+    pip2 install "$srcdir/diethack/src"
 }
