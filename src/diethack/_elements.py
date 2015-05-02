@@ -104,6 +104,3 @@ def makeElementsUnits():
             silicon = 'mg',
             vanadium = 'mcg'
     )
-
-def makeElementsPriority():
-    return dict([(k, 1) for k in makeElements().keys()])
