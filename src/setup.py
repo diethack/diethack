@@ -29,5 +29,5 @@ setup(
         'Topic :: Software Development :: Libraries'
     ],
     keywords='diet calculator',
-    packages=find_packages(exclude=['prepare.py'])
+    packages=['diethack']
 )
