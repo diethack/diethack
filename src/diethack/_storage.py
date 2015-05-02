@@ -1,5 +1,5 @@
-from ._util import writeFile, readFileLines
-from ._elements import makeElements
+from _util import writeFile, readFileLines
+from _elements import makeElements
 from os import path
 from pprint import pformat
 import logging

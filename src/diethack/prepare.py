@@ -1,4 +1,4 @@
-from ._storage import rebuildCache
+from _storage import rebuildCache
 import logging
 
 if __name__ == '__main__':
