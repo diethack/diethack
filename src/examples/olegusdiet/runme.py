@@ -16,17 +16,17 @@ if __name__ == '__main__':
     logging.basicConfig(format='%(levelname)-8s %(asctime)-15s %(message)s')
     logging.getLogger().setLevel(logging.INFO)
 
-    myDiet = solve(products(), goal(), elementsPriority())
+    olegusDiet = solve(products(), goal(), elementsPriority())
     randomDiet = solve(randomProducts(20), goal(), elementsPriority())
 
-    with open('mydiet.html', 'w') as f:
+    with open('olegusdiet.html', 'w') as f:
         f.write(reportHtml(products(), makeProductUnits(), goal(),
-                           myDiet, 'light'))
-    with open('mydiet.txt', 'w') as f:
-        f.write(reportTxt(products(), makeProductUnits(), goal(), myDiet))
-    with open('mydiet-shoplist.html', 'w') as f:
+                           olegusDiet, 'light'))
+    with open('olegusdiet.txt', 'w') as f:
+        f.write(reportTxt(products(), makeProductUnits(), goal(), olegusDiet))
+    with open('olegusdiet-shoplist.html', 'w') as f:
         f.write(reportShop(products(), makeProductUnits(), goal(),
-                           myDiet, 'light'))
+                           olegusDiet, 'light'))
     with open('randomdiet.html', 'w') as f:
         f.write(reportHtml(products(), makeProductUnits(), goal(),
                            randomDiet, 'light'))
