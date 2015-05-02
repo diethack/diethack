@@ -14,7 +14,7 @@ def products():
            _sugar() + \
            _tableSalt() + \
            _distilledWater() + \
-           _microSupplements()
+           microSupplements()
 
 def microSupplements():
     return _tableSalt() + \

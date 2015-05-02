@@ -22,7 +22,7 @@ if __name__ == '__main__':
     logging.getLogger().setLevel(logging.DEBUG)
 
     olegusProds = products()
-    randomProds = randomProducts(100) + microSupplements()
+    randomProds = randomProducts(1000) + microSupplements()
 
     olegusDiet = solve(olegusProds, goal(), elementsPriority())
     randomDiet = solve(randomProds, goal(), elementsPriority())
