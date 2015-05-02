@@ -138,8 +138,7 @@ def makeHeadProducts(ps):
     return reduce(operator.add, [[
          '<th title="%s">' % htmlEscape(p['name'])
          ] + ([
-         '    <a href="%s" onclick="window.open(\'%s\'); return false">'
-              % (p['dataUrl'], p['dataUrl']),
+         '    <a href="%s">' % p['dataUrl'],
          '        ' + productName(p),
          '    </a>']
          if p['dataUrl'] else [
@@ -425,8 +424,7 @@ def makeShopBodyRows(ps, units, goal, sln):
     return reduce(operator.add, [[
         '<tr>',
         '    <td>',
-        '        <a href="%s" onclick="window.open(\'%s\'); return false">'
-                 % (ps[i]['dataUrl'], ps[i]['dataUrl']),
+        '        <a href="%s">' % ps[i]['dataUrl'],
         '            ' + htmlEscape(ps[i]['name']),
         '        </a>',
         '    </td>',
