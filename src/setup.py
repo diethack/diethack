@@ -11,7 +11,7 @@ if not isfile(join(dirname(__file__), 'diethack/_cache/chunks.py')):
 setup(
     name='diethack',
     version='0.0.0',
-    description='Diet calculator for hackers.',
+    description='Diet problem solver with dietary reference intakes in mind.',
     url='http://www.diethack.org',
     author='Oleg Plakhotniuk',
     author_email='contact@diethack.org',
@@ -20,7 +20,7 @@ setup(
         'Environment :: Console',
         'Intended Audience :: Developers',
         'Intended Audience :: Science/Research',
-        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+        'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
         'Operating System :: POSIX',
         'Programming Language :: Python :: 2.7',
@@ -28,6 +28,6 @@ setup(
         'Topic :: Scientific/Engineering :: Medical Science Apps.',
         'Topic :: Software Development :: Libraries'
     ],
-    keywords='diet calculator',
+    keywords='diet problem solver dri',
     packages=['diethack', 'diethack._cache']
 )
