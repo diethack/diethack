@@ -2,6 +2,7 @@ from _util import writeFile, readFileLines
 from _elements import makeElements
 from os import path
 from pprint import pformat
+from importlib import import_module
 import logging
 
 CACHE_DIR = '_cache'
@@ -200,7 +201,7 @@ def fetchNndb(code):
     name = chunkName(chunkNo)
     if not hasattr(_cache, name):
         logging.debug('Loading cache chunk %i' % chunkNo)
-        __import__('%s.%s' % (CACHE_DIR, name))
+        import_module('%s.%s' % (CACHE_DIR, name), package='diethack')
     return getattr(_cache, name).values[code]
 
 def fetchNndbCodes():
