@@ -19,6 +19,6 @@ build() {
 }
 
 package() {
-    cd "$srcdir/$pkgname-$pkgver"
+    cd "$srcdir/diethack/src"
     python2 setup.py install --root="$pkgdir/" --optimize=1
 }
