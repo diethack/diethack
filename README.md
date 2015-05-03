@@ -22,7 +22,7 @@ python2 /usr/share/python2-diethack/examples/olegusdiet/runme.py
 ```
 
 Feel free to play with it. When computing your own diet, it's a good idea
-to start with the example and then gradually change it one step at a time
+to start with this example and then gradually change it one step at a time
 to make sure the diet still computes.
 
 Have fun!
