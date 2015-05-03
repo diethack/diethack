@@ -1,6 +1,6 @@
 # Maintainer: Oleg Plakhotniuk <olegus8@gmail.com>
 pkgname=python2-diethack
-pkgver=0.0.0
+pkgver=1.0.0
 pkgrel=1
 pkgdesc="Diet problem solver with Dietary Reference Intakes in mind."
 arch=('any')
