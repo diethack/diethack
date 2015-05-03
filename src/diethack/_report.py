@@ -352,7 +352,7 @@ def makeBodyElement(k, ps, units, goal, sln):
         '<td>',
         '    ' + units['elements'][k],
         '</td>',
-        '<td>'] + 
+        '<td>'] +
        ['    ' + s for s in makeBodyElementTotal(k, ps, goal, sln)] + [
         '</td>',
         '<td class="attention">'

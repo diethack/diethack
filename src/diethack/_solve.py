@@ -157,4 +157,3 @@ def makePrintMasses(ps):
 
 def makeEnd():
     return ['end;']
-

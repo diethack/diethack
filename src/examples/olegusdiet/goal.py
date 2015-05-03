@@ -79,14 +79,14 @@ def goal():
     carbScaleLow = 3.0 # g*kg-1 light training program
     carbScaleMed = 7.0 # g*kg-1 moderate excercise program
     proteinScale = 1.6 # g*kg-1 resistance training, weight gain
-    ironPerDay = 17.5 # mg 
+    ironPerDay = 17.5 # mg
     bmr = 8.4 / 0.0042 # kcal (for 88 kg body mass, 30 years old)
     activity = 1.4 # sedatory lifestyle
 
     energyRateBig = 0.236 # kcal*kg-1*min-1 (in a 30 seconds) Energy Cost of Resistance Exercises: an Update (Reis, Junior, Zajac, Oliveira)
     energyRateMed = 0.101 # kcal*kg-1*min-1 Energy Cost of Moderate-Duration Resistance and Aerobic Excercise (Bloomer)
     energyRateLow = 0.06 # kcal*kg-1*min-1 (pull-ups, push-ups, curl-ups, lunges) Energy Expenditure of Resistance Training Activities in Young Men (Vezina)
-    
+
     # my data
     # each set ~= 1 min
     timeWarmup = 5.0 # min

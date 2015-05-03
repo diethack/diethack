@@ -86,7 +86,7 @@ ELEMENTS_MAP = {
 
 def chunkFileName(name):
     return path.join(path.dirname(__file__), CACHE_DIR, '%s.py' % name)
-    
+
 def rebuildCache():
     logging.info('Rebuilding nutrition data cache...')
     nndb = dict([(k, loadNNDBTable(k, v))
