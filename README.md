@@ -15,8 +15,8 @@ for the project [homepage](http://www.diethack.org).
 
 ## Running the Examples
 
-The following command will generate example diet reports in the current
-directory as seen on the [homepage](http://www.diethack.org):
+The following command will generate example diet reports
+as seen on the [homepage](http://www.diethack.org):
 ```
 python2 /usr/share/python2-diethack/examples/olegusdiet/runme.py
 ```
